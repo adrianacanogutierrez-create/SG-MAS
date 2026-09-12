@@ -1,42 +1,44 @@
+"use client"
+
+import { useEffect, useState } from "react"
 import Link from "next/link"
-import { Menu } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import config from "@/config"
 import Logo from "@/components/Logo"
+import CtaButton from "@/components/landing/CtaButton"
 
 export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false)
+  const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 8)
+    }
+    onScroll()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
+
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-base-200 bg-base-100/80 backdrop-blur">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <div className="flex items-center gap-2">
-          {/* Menú móvil */}
-          <div className="dropdown md:hidden">
-            <label tabIndex={0} className="btn btn-ghost btn-sm px-2" aria-label="Abrir menú">
-              <Menu className="size-5" />
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu dropdown-content z-50 mt-2 w-52 rounded-box border border-base-200 bg-base-100 p-2 shadow"
-            >
-              {config.landing.nav.map((item) => (
-                <li key={item.href}>
-                  <Link href={item.href}>{item.label}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+    <header
+      className={`sticky top-0 z-50 w-full bg-white transition-shadow ${scrolled ? "navbar-scrolled" : ""}`}
+    >
+      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 lg:py-4">
+        <Link
+          href="/#inicio"
+          className="relative z-10 flex shrink-0 items-center overflow-visible"
+          aria-label={`${config.brand.logoText} — Inicio`}
+        >
+          <Logo variant="nav" />
+        </Link>
 
-          <Link href="/" className="flex items-center gap-2 text-lg font-bold tracking-tight">
-            <Logo className="size-7" />
-            {config.brand.logoText}
-          </Link>
-        </div>
-
-        <ul className="hidden items-center gap-6 md:flex">
+        <ul className="hidden items-center gap-5 lg:flex">
           {config.landing.nav.map((item) => (
             <li key={item.href}>
               <Link
                 href={item.href}
-                className="text-sm text-base-content/70 transition hover:text-base-content"
+                className="text-xs font-semibold uppercase tracking-wide text-[var(--sgmas-blue)] transition hover:text-[var(--sgmas-green)]"
               >
                 {item.label}
               </Link>
@@ -44,17 +46,44 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-2">
-          {config.features.googleAuth && (
-            <Link href={config.auth.loginUrl} className="btn btn-sm btn-ghost">
-              Entrar
-            </Link>
-          )}
-          <Link href="#waitlist" className="btn btn-sm btn-accent">
-            {config.landing.hero.cta.label}
-          </Link>
+        <div className="hidden lg:block">
+          <CtaButton label="Solicitar diagnóstico" service="diagnostico" className="text-xs" />
         </div>
+
+        <button
+          type="button"
+          className="rounded-md p-2 text-[var(--sgmas-blue)] lg:hidden"
+          aria-label={open ? "Cerrar menú" : "Abrir menú"}
+          onClick={() => setOpen(!open)}
+        >
+          {open ? <X className="size-6" /> : <Menu className="size-6" />}
+        </button>
       </nav>
+
+      {open && (
+        <div className="border-t border-[var(--sgmas-bg-gray)] bg-white px-4 py-4 lg:hidden">
+          <ul className="space-y-3">
+            {config.landing.nav.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="block text-sm font-semibold uppercase text-[var(--sgmas-blue)]"
+                  onClick={() => setOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-4">
+            <CtaButton
+              label="Solicitar diagnóstico"
+              service="diagnostico"
+              className="w-full text-xs"
+            />
+          </div>
+        </div>
+      )}
     </header>
   )
 }

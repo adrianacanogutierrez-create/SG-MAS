@@ -13,6 +13,7 @@ const nextConfig = {
     remotePatterns: [
       { protocol: "https", hostname: "lh3.googleusercontent.com" }, // avatares Google
       { protocol: "https", hostname: "avatars.githubusercontent.com" },
+      { protocol: "https", hostname: "images.unsplash.com" },
     ],
   },
   async redirects() {

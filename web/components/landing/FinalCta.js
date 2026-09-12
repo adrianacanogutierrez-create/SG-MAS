@@ -1,39 +1,33 @@
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 import config from "@/config"
+import CtaButton from "./CtaButton"
+import FadeIn from "./FadeIn"
 
 export default function FinalCta() {
-  const { eyebrow, title, subtitle, cta, ctaSecondary } = config.landing.finalCta
+  const { title, text, cta, ctaSecondary, image } = config.landing.finalCta
 
   return (
-    <section className="relative overflow-hidden border-t border-base-200 bg-base-100">
-      <div
-        className="pointer-events-none absolute inset-0 -z-10 [mask-image:radial-gradient(60%_60%_at_50%_100%,#000,transparent)]"
-        aria-hidden
-      >
-        <div className="absolute bottom-0 left-1/2 size-[500px] -translate-x-1/2 rounded-full bg-primary/15 blur-3xl" />
-      </div>
+    <section className="relative overflow-hidden py-24 md:py-32">
+      <Image
+        src={image}
+        alt="Instalaciones industriales"
+        fill
+        className="object-cover"
+        sizes="100vw"
+      />
+      <div className="absolute inset-0 bg-[var(--sgmas-blue)]/85" aria-hidden />
 
-      <div className="mx-auto max-w-3xl px-4 py-20 text-center md:py-28">
-        {eyebrow && (
-          <p className="text-sm font-medium uppercase tracking-wider text-primary">{eyebrow}</p>
-        )}
-        <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight md:text-5xl">{title}</h2>
-        {subtitle && (
-          <p className="mt-5 text-balance text-lg text-base-content/70">{subtitle}</p>
-        )}
-
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-          <Link href={cta.href} className="btn btn-accent btn-lg">
-            {cta.label}
-            <ArrowRight className="size-4" />
-          </Link>
-          {ctaSecondary && (
-            <Link href={ctaSecondary.href} className="btn btn-ghost btn-lg">
-              {ctaSecondary.label}
-            </Link>
-          )}
-        </div>
+      <div className="relative z-10 sgmas-container text-center">
+        <FadeIn>
+          <h2 className="text-2xl font-bold uppercase leading-tight text-white md:text-3xl lg:text-4xl">
+            {title}
+          </h2>
+          <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-white/90">{text}</p>
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <CtaButton label={cta.label} service={cta.service} />
+            <CtaButton label={ctaSecondary.label} service={ctaSecondary.service} variant="outline" />
+          </div>
+        </FadeIn>
       </div>
     </section>
   )

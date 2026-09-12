@@ -2,35 +2,44 @@
 @plugin "daisyui";
 
 /* ============================================================
-   Tema de marca Vibecoding (Flat Design)
-   Paleta: azul cielo (primary/accent/CTA) + slate (neutral).
-   El primary real lo inyecta config.brand.primary desde layout.js
-   como --color-primary inline (config = fuente de verdad).
+   Tema SG+MAS — consultoría ambiental y seguridad industrial
    ============================================================ */
+:root {
+  --sgmas-blue: #193961;
+  --sgmas-green: #82c033;
+  --sgmas-gray: #51504f;
+  --sgmas-white: #ffffff;
+  --sgmas-blue-dark: #19385e;
+  --sgmas-green-light: #83c134;
+  --sgmas-bg-light: #f5f6f5;
+  --sgmas-bg-gray: #edeeee;
+  --sgmas-gradient: linear-gradient(135deg, #193961 0%, #193961 45%, #82c033 100%);
+}
+
 @plugin "daisyui/theme" {
   name: "vibecoding";
   default: true;
   prefersdark: false;
   color-scheme: light;
-  --color-primary: #0ea5e9;
+  --color-primary: #193961;
   --color-primary-content: #ffffff;
-  --color-secondary: #0284c7;
+  --color-secondary: #51504f;
   --color-secondary-content: #ffffff;
-  --color-accent: #0ea5e9;
+  --color-accent: #82c033;
   --color-accent-content: #ffffff;
-  --color-neutral: #1e293b;
-  --color-neutral-content: #f8fafc;
+  --color-neutral: #51504f;
+  --color-neutral-content: #f5f6f5;
   --color-base-100: #ffffff;
-  --color-base-200: #f8fafc;
-  --color-base-300: #e2e8f0;
-  --color-base-content: #1e293b;
-  --color-info: #0ea5e9;
-  --color-success: #16a34a;
+  --color-base-200: #f5f6f5;
+  --color-base-300: #edeeee;
+  --color-base-content: #51504f;
+  --color-info: #193961;
+  --color-success: #82c033;
   --color-warning: #f59e0b;
   --color-error: #dc2626;
-  --radius-box: 1rem;
-  --radius-field: 0.5rem;
-  --radius-selector: 0.5rem;
+  --radius-box: 0.5rem;
+  --radius-field: 0.375rem;
+  --radius-selector: 0.375rem;
 }
 
 @plugin "daisyui/theme" {
@@ -65,17 +74,64 @@ body {
 }
 
 body {
-  font-family: var(--font-dm-sans, ui-sans-serif, system-ui, sans-serif);
+  font-family: var(--font-montserrat, ui-sans-serif, system-ui, sans-serif);
   -webkit-font-smoothing: antialiased;
 }
 
-/* Tipografía de display: headings con Space Grotesk */
 h1,
 h2,
 h3,
 h4,
 .font-heading {
-  font-family: var(--font-space-grotesk, var(--font-dm-sans, ui-sans-serif, system-ui, sans-serif));
+  font-family: var(--font-montserrat, ui-sans-serif, system-ui, sans-serif);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* SG+MAS — utilidades de landing */
+.sgmas-eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.2em] text-[var(--sgmas-green)];
+}
+
+.sgmas-section {
+  @apply py-20 md:py-28;
+}
+
+.sgmas-container {
+  @apply mx-auto max-w-6xl px-4;
+}
+
+.btn-sgmas-cta {
+  @apply inline-flex items-center justify-center gap-2 rounded-md bg-[var(--sgmas-green)] px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-[var(--sgmas-green-light)] focus-visible:outline-none;
+}
+
+.btn-sgmas-outline {
+  @apply inline-flex items-center justify-center gap-2 rounded-md border-2 border-white/80 bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-white/10;
+}
+
+.btn-sgmas-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-md border-2 border-[var(--sgmas-blue)] bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-[var(--sgmas-blue)] transition hover:bg-[var(--sgmas-blue)] hover:text-white;
+}
+
+.sgmas-card {
+  @apply rounded-lg border border-[var(--sgmas-bg-gray)] bg-white p-6 shadow-sm transition hover:shadow-md;
+}
+
+.sgmas-fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.sgmas-fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navbar-scrolled {
+  box-shadow: 0 1px 3px rgb(25 57 97 / 8%);
 }
 
 /* ============================================================

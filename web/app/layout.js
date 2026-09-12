@@ -1,19 +1,12 @@
 import "./globals.css"
-import { Space_Grotesk, DM_Sans } from "next/font/google"
+import { Montserrat } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import config from "@/config"
 
-const spaceGrotesk = Space_Grotesk({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-space-grotesk",
-  display: "swap",
-})
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-dm-sans",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-montserrat",
   display: "swap",
 })
 
@@ -22,12 +15,25 @@ export const metadata = {
     process.env.NEXT_PUBLIC_APP_URL || config.app.defaultUrl
   ),
   title: {
-    default: config.app.name,
+    default: config.app.seoTitle || config.app.name,
     template: `%s · ${config.app.name}`,
   },
   description: config.app.description,
+  keywords: [
+    "consultoría ambiental",
+    "seguridad industrial",
+    "cumplimiento ambiental",
+    "auditoría ambiental",
+    "auditoría de seguridad industrial",
+    "diagnóstico de cumplimiento",
+    "capacitación empresarial",
+    "NOM-STPS",
+    "gestión ambiental",
+    "trámites ambientales",
+    "seguridad e higiene industrial",
+  ],
   openGraph: {
-    title: config.app.name,
+    title: config.app.seoTitle || config.app.name,
     description: config.app.description,
     type: "website",
     locale: config.app.locale === "es" ? "es_MX" : "en_US",
@@ -48,8 +54,11 @@ export default function RootLayout({ children }) {
       lang={config.app.locale}
       data-theme="vibecoding"
       suppressHydrationWarning
-      className={`${spaceGrotesk.variable} ${dmSans.variable}`}
-      style={{ "--color-primary": config.brand.primary }}
+      className={montserrat.variable}
+      style={{
+        "--color-primary": config.brand.primary,
+        "--color-accent": config.brand.accent || "#82C033",
+      }}
     >
       <body className="bg-base-100 text-base-content">
         <script
