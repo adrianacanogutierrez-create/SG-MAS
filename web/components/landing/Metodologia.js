@@ -3,12 +3,12 @@ import SectionHeader from "./SectionHeader"
 import FadeIn from "./FadeIn"
 
 export default function Metodologia() {
-  const { eyebrow, title, steps } = config.landing.metodologia
+  const { id, title, subtitle, steps } = config.landing.metodologia
 
   return (
-    <section className="sgmas-section bg-[var(--sgmas-bg-light)]">
+    <section id={id} className="sgmas-section bg-white">
       <div className="sgmas-container">
-        <SectionHeader eyebrow={eyebrow} title={title} align="center" />
+        <SectionHeader title={title} subtitle={subtitle} align="center" />
 
         <div className="mt-14 hidden md:block">
           <div className="relative">

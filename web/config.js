@@ -8,7 +8,7 @@ const config = {
   app: {
     name: "SG+MAS",
     description:
-      "Consultoría, auditorías, capacitación y gestión de trámites en materia ambiental y seguridad industrial para empresas en México.",
+      "Consultoría, auditorías, capacitación y gestión ambiental para empresas. Servicios especializados en seguridad industrial, cumplimiento y prevención en Chihuahua.",
     seoTitle: "SG+MAS | Consultoría Ambiental y Seguridad Industrial",
     icp:
       "Empresas medianas y grandes del sector industrial (manufactura, maquila, logística, agroindustria y química) con alta exposición a riesgos operativos.",
@@ -82,37 +82,49 @@ const config = {
     ],
 
     hero: {
-      title:
-        "Conoce el nivel de cumplimiento de tu empresa y toma decisiones con información.",
+      titleLine1: "Fortalece tu empresa.",
+      titleLine2: "Previene riesgos.",
       subtitle:
-        "Evaluamos de manera integral las condiciones ambientales y de seguridad industrial de tu organización para identificar brechas, establecer prioridades y fortalecer su gestión de cumplimiento.",
+        "Consultoría, auditorías, capacitación y gestión ambiental para fortalecer el cumplimiento y la seguridad de tu operación.",
+      complement:
+        "Soluciones especializadas para empresas que buscan prevenir riesgos, atender sus obligaciones y fortalecer su gestión ambiental y de seguridad industrial.",
       supportText:
         "Gestión ambiental · Seguridad industrial · Cumplimiento · Capacitación",
       cta: { label: "Solicitar diagnóstico", service: "diagnostico" },
-      ctaSecondary: { label: "Conocer servicios", href: "#consultoria" },
+      ctaSecondary: { label: "Ver servicios", href: "#servicios" },
       image:
         "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&q=85&auto=format&fit=crop",
     },
 
-    valueProp: {
-      eyebrow: "Nuestro enfoque",
-      title: "Del cumplimiento a la gestión preventiva.",
-      text: "El cumplimiento no debe limitarse a responder ante una inspección. Una gestión adecuada comienza con el conocimiento preciso de las obligaciones aplicables, la identificación objetiva de las brechas y la definición de prioridades para su atención. En SG+MAS integramos evaluación, análisis y acompañamiento profesional para proporcionar una visión clara de la situación actual de cada organización.",
+    servicios: {
+      id: "servicios",
+      title: "Soluciones para tu empresa",
+      subtitle:
+        "Servicios especializados para fortalecer la gestión ambiental, la seguridad industrial y el cumplimiento de tu organización.",
       items: [
         {
           number: "01",
-          title: "Diagnóstico",
-          body: "Identificación de obligaciones, condiciones y áreas de oportunidad relevantes para la operación.",
+          title: "Consultoría y auditorías",
+          tagline: "Evalúa. Detecta. Prioriza.",
+          description:
+            "Diagnósticos y evaluaciones ambientales y de seguridad industrial para conocer el estado actual de tu empresa, identificar áreas de atención y establecer prioridades.",
+          cta: { label: "Conocer consultoría", href: "#consultoria" },
         },
         {
           number: "02",
-          title: "Priorización",
-          body: "Análisis de hallazgos para determinar niveles de atención y establecer prioridades de intervención.",
+          title: "Capacitación empresarial",
+          tagline: "Forma a tu equipo. Fortalece la prevención.",
+          description:
+            "Cursos especializados en seguridad, salud y medio ambiente, orientados a las necesidades reales de las organizaciones.",
+          cta: { label: "Ver capacitación", href: "#capacitacion" },
         },
         {
           number: "03",
-          title: "Fortalecimiento",
-          body: "Definición de acciones orientadas a mejorar el cumplimiento, prevenir riesgos y fortalecer la gestión.",
+          title: "Gestión y trámites",
+          tagline: "Ordena tus obligaciones. Gestiona tu cumplimiento.",
+          description:
+            "Acompañamiento profesional en trámites, permisos, registros y obligaciones ante autoridades ambientales, laborales y de protección civil.",
+          cta: { label: "Ver servicios", href: "#tramites" },
         },
       ],
     },
@@ -120,81 +132,75 @@ const config = {
     consultoria: {
       id: "consultoria",
       eyebrow: "Consultoría y auditorías",
-      title: "Evaluamos. Identificamos. Priorizamos.",
-      subtitle:
-        "Una evaluación profesional permite conocer el estado actual de cumplimiento de tu empresa antes de que una desviación se convierta en una contingencia.",
-      text: "Nuestro enfoque combina revisión documental, evaluación de condiciones físicas y análisis de aspectos operativos para obtener una visión integral de las áreas ambiental y de seguridad industrial.",
-      diagnostico: {
-        title: "Diagnóstico 360° ambiental y de seguridad industrial",
-        text: "Una evaluación preventiva diseñada para identificar el nivel de cumplimiento de la organización, detectar brechas y establecer una ruta de atención de acuerdo con las necesidades y características de cada operación.",
-        elements: [
-          {
-            title: "Evaluación documental",
-            body: "Revisión de documentación, registros, programas, permisos, procedimientos y evidencias asociadas a las obligaciones aplicables.",
-          },
-          {
-            title: "Evaluación en campo",
-            body: "Verificación de condiciones físicas, instalaciones, equipos, señalización, almacenamiento, controles operacionales y condiciones de seguridad.",
-          },
-          {
-            title: "Evaluación ambiental",
-            body: "Revisión de aspectos relacionados con residuos, almacenamiento, manejo, registros, obligaciones y controles ambientales aplicables.",
-          },
-          {
-            title: "Análisis de cumplimiento",
-            body: "Identificación y clasificación de hallazgos para facilitar la toma de decisiones.",
-          },
-          {
-            title: "Matriz de prioridades",
-            body: "Organización de las áreas de atención de acuerdo con su relevancia y nivel de riesgo.",
-          },
-          {
-            title: "Plan de acción",
-            body: "Definición de acciones recomendadas para avanzar en la atención de las brechas identificadas.",
-          },
-        ],
-        cta: { label: "Solicitar diagnóstico 360°", service: "diagnostico" },
-      },
+      title: "Conoce qué debe atender tu empresa y por dónde empezar.",
+      text: "Evaluamos documentación, condiciones de operación y aspectos ambientales y de seguridad industrial para identificar áreas de atención y establecer prioridades.",
     },
 
-    diagnosticoFlow: {
-      title: "Información para tomar decisiones.",
-      text: "El valor de una evaluación no está únicamente en detectar incumplimientos, sino en convertir los hallazgos en información útil para la gestión.",
-      steps: [
-        "Situación actual",
-        "Identificación de brechas",
-        "Evaluación",
-        "Priorización",
-        "Plan de acción",
-        "Seguimiento",
+    diagnostico360: {
+      id: "diagnostico",
+      title: "Diagnóstico 360°",
+      titleLine2: "Ambiental y de seguridad industrial",
+      text: "Una evaluación preventiva diseñada para conocer el estado actual de tu empresa, detectar brechas y establecer una ruta de atención de acuerdo con las características de tu operación.",
+      elementsTitle: "¿Qué revisamos?",
+      elements: [
+        {
+          number: "01",
+          title: "Revisión documental",
+          body: "Documentación, registros, programas, permisos, procedimientos y evidencias aplicables.",
+        },
+        {
+          number: "02",
+          title: "Evaluación en campo",
+          body: "Condiciones físicas, instalaciones, equipos, señalización y controles relacionados con la operación.",
+        },
+        {
+          number: "03",
+          title: "Aspectos ambientales",
+          body: "Residuos, almacenamiento, registros, obligaciones y controles ambientales aplicables.",
+        },
+        {
+          number: "04",
+          title: "Análisis de cumplimiento",
+          body: "Identificación y clasificación de hallazgos y áreas de atención.",
+        },
+        {
+          number: "05",
+          title: "Matriz de prioridades",
+          body: "Organización de las áreas que requieren atención de acuerdo con su relevancia.",
+        },
+        {
+          number: "06",
+          title: "Plan de acción",
+          body: "Definición de acciones recomendadas para atender las áreas identificadas.",
+        },
       ],
-      footer:
-        "El resultado proporciona una visión estructurada de las principales áreas de oportunidad y facilita la definición de acciones de mejora.",
+      cta: { label: "Solicitar diagnóstico 360°", service: "diagnostico" },
     },
 
     auditorias: {
-      eyebrow: "Evaluación especializada",
-      title: "Auditorías orientadas a la prevención y al cumplimiento.",
-      text: "Evaluaciones enfocadas en verificar el grado de cumplimiento de requisitos ambientales y de seguridad industrial, identificar desviaciones y proporcionar elementos para su atención.",
+      id: "evaluaciones",
+      eyebrow: "Evaluaciones especializadas",
+      title: "Evaluaciones especializadas",
+      subtitle: "Servicios de evaluación enfocados en áreas específicas de la operación.",
       items: [
         {
-          title: "Auditoría de seguridad industrial",
+          title: "Seguridad industrial",
           body: "Revisión de condiciones, controles, documentación y prácticas relacionadas con la prevención de riesgos laborales.",
         },
         {
-          title: "Auditoría ambiental",
+          title: "Medio ambiente",
           body: "Evaluación de aspectos y obligaciones ambientales aplicables a las actividades de la organización.",
         },
         {
           title: "Revisión documental",
-          body: "Análisis sistemático de expedientes, registros, programas, permisos, procedimientos y evidencias.",
+          body: "Análisis de expedientes, registros, programas, permisos, procedimientos y evidencias.",
         },
         {
           title: "Preparación para inspecciones",
-          body: "Identificación preventiva de áreas susceptibles de observación antes de una visita de autoridad.",
+          body: "Revisión preventiva para identificar áreas susceptibles de observación antes de una visita de autoridad.",
         },
       ],
-      cta: { label: "Solicitar una evaluación", service: "auditoria" },
+      cta: { label: "Solicitar una evaluación", service: "consultoria" },
     },
 
     capacitacion: {
@@ -232,7 +238,7 @@ const config = {
           category: "Seguridad industrial",
           name: "Operación Segura de Montacargas",
           description:
-            "Capacitación enfocada en la prevención de incidentes durante las actividades relacionadas con la operación y manejo de materiales mediante montacargas.",
+            "Capacitación enfocada en la prevención de incidentes durante las actividades relacionadas con la operación y manejo de materiales.",
           objective:
             "Fortalecer los conocimientos del personal sobre los principales riesgos asociados con la operación de montacargas y las medidas preventivas aplicables en el entorno laboral.",
           temario: [
@@ -274,7 +280,7 @@ const config = {
           category: "Emergencias",
           name: "Combate Contra Incendios",
           description:
-            "Fortalece la preparación del personal para prevenir incendios y participar de manera organizada en la respuesta ante situaciones de emergencia.",
+            "Fortalece la preparación del personal para prevenir incendios y participar de manera organizada en la respuesta ante emergencias.",
           objective:
             "Desarrollar conocimientos básicos de prevención, organización y respuesta ante incendios, de acuerdo con las condiciones y riesgos de cada centro de trabajo.",
           temario: [
@@ -316,7 +322,7 @@ const config = {
           category: "Seguridad industrial",
           name: "Trabajos en Alturas",
           description:
-            "Capacitación para reconocer los riesgos asociados al trabajo en alturas y fortalecer las medidas preventivas para evitar accidentes.",
+            "Capacitación para reconocer los riesgos asociados al trabajo en alturas y fortalecer las medidas preventivas.",
           objective:
             "Proporcionar conocimientos para identificar peligros, aplicar medidas preventivas y fortalecer la gestión segura de las actividades realizadas en altura.",
           temario: [
@@ -338,7 +344,7 @@ const config = {
           category: "Gestión ambiental",
           name: "Llenado de la Cédula de Operación Anual",
           description:
-            "Capacitación para comprender la estructura de la COA y organizar la información ambiental necesaria para su integración y presentación.",
+            "Capacitación para comprender la estructura de la COA y organizar la información ambiental necesaria para su integración.",
           objective:
             "Proporcionar conocimientos para identificar, organizar y revisar la información requerida para la integración de la Cédula de Operación Anual, de acuerdo con las obligaciones aplicables al establecimiento.",
           temario: [
@@ -391,13 +397,14 @@ const config = {
 
     tramites: {
       id: "tramites",
-      eyebrow: "Gestión y cumplimiento",
-      title: "Gestión de obligaciones y trámites ante autoridades.",
-      text: "Apoyamos a las organizaciones en la identificación, preparación y gestión de obligaciones y trámites relacionados con sus actividades, de acuerdo con el marco regulatorio aplicable y la autoridad competente.",
+      eyebrow: "Gestión y trámites",
+      title: "Gestión y trámites",
+      subtitle: "Ordena tus obligaciones y gestiona los trámites aplicables a tu operación.",
+      text: "Apoyamos a las organizaciones en la identificación, preparación y gestión de obligaciones y trámites ante las autoridades competentes, de acuerdo con las características de cada establecimiento.",
       levels: [
         {
           title: "Federal",
-          items: ["SEMARNAT", "PROFEPA", "STPS", "Y otras autoridades federales competentes según la actividad."],
+          items: ["SEMARNAT", "PROFEPA", "STPS", "Otras autoridades federales competentes según la actividad."],
         },
         {
           title: "Estatal",
@@ -427,51 +434,49 @@ const config = {
     },
 
     metodologia: {
-      eyebrow: "Metodología SG+MAS",
-      title: "Un proceso estructurado para entender y mejorar el cumplimiento.",
+      id: "metodologia",
+      title: "¿Cómo trabajamos?",
+      subtitle:
+        "Un proceso estructurado para conocer la situación de tu empresa y definir prioridades de atención.",
       steps: [
-        { number: "01", title: "Conocer", body: "Comprendemos las características y actividades de la organización." },
-        { number: "02", title: "Evaluar", body: "Analizamos documentación, instalaciones y condiciones operativas." },
-        { number: "03", title: "Identificar", body: "Detectamos brechas, desviaciones y áreas de oportunidad." },
-        { number: "04", title: "Priorizar", body: "Determinamos qué debe atenderse primero." },
-        { number: "05", title: "Fortalecer", body: "Definimos acciones orientadas a mejorar el desempeño y reducir riesgos." },
+        { number: "01", title: "Conocemos", body: "Comprendemos las características y actividades de la organización." },
+        { number: "02", title: "Evaluamos", body: "Analizamos documentación, instalaciones y condiciones operativas." },
+        { number: "03", title: "Identificamos", body: "Detectamos brechas, desviaciones y áreas de atención." },
+        { number: "04", title: "Priorizamos", body: "Determinamos qué requiere atención primero." },
+        { number: "05", title: "Acompañamos", body: "Definimos acciones orientadas a fortalecer la gestión y reducir riesgos." },
       ],
     },
 
-    diferenciador: {
-      title: "No se trata solo de cumplir. Se trata de gestionar el riesgo.",
-      text: "Una organización preparada conoce sus obligaciones, identifica sus vulnerabilidades y cuenta con información para actuar antes de que una desviación genere consecuencias operativas, legales o económicas.",
-      quote: "Conocer el estado actual de cumplimiento es el primer paso para gestionarlo.",
-      cta: { label: "Evaluar mi empresa", service: "diagnostico" },
-    },
-
-    paraQuien: {
-      title: "Soluciones para organizaciones que buscan mayor control sobre su cumplimiento.",
+    momentos: {
+      id: "momentos",
+      title: "¿En qué momento puede ayudarte SG+MAS?",
       items: [
         {
-          title: "Empresas industriales",
-          body: "Para organizaciones que necesitan fortalecer sus sistemas de gestión ambiental y seguridad industrial.",
+          title: "¿Vas a iniciar operaciones?",
+          body: "Identifica las obligaciones ambientales y de seguridad aplicables a tu actividad.",
         },
         {
-          title: "PYMES",
-          body: "Para empresas que requieren identificar sus obligaciones y establecer prioridades sin asumir estructuras administrativas innecesariamente complejas.",
+          title: "¿Tu empresa ya está operando?",
+          body: "Evalúa el estado actual y detecta áreas que requieren atención.",
         },
         {
-          title: "Empresas en crecimiento",
-          body: "Para organizaciones que necesitan ordenar sus obligaciones y fortalecer sus procesos conforme crece su operación.",
+          title: "¿Tienes pendientes regulatorios?",
+          body: "Ordena obligaciones, trámites y prioridades de atención.",
         },
         {
-          title: "Empresas ante una inspección",
-          body: "Para organizaciones que desean realizar una evaluación preventiva antes de una visita de autoridad.",
+          title: "¿Tienes una inspección próxima?",
+          body: "Realiza una revisión preventiva antes de una visita de autoridad.",
         },
       ],
     },
 
     nosotros: {
       id: "nosotros",
-      eyebrow: "SG+MAS",
+      eyebrow: "Nosotros",
       title: "Conocimiento técnico orientado a la gestión empresarial.",
-      text: "SG+MAS integra conocimiento técnico en gestión ambiental, seguridad industrial y cumplimiento normativo con una visión orientada a las necesidades reales de las organizaciones. Nuestro enfoque combina análisis técnico, prevención y acompañamiento profesional para transformar las obligaciones regulatorias en herramientas de gestión.",
+      text: "SG+MAS integra experiencia en gestión ambiental, seguridad industrial y cumplimiento normativo con una visión orientada a las necesidades reales de las organizaciones.",
+      text2:
+        "Nuestro trabajo combina análisis técnico, prevención y acompañamiento profesional para ayudar a las empresas a comprender sus obligaciones, identificar áreas de atención y fortalecer su gestión.",
       pillars: [
         "Gestión ambiental",
         "Seguridad industrial",
@@ -481,8 +486,8 @@ const config = {
     },
 
     finalCta: {
-      title: "¿Conoces realmente el nivel de cumplimiento de tu empresa?",
-      text: "Obtén una visión estructurada de tus principales áreas de oportunidad y establece prioridades para fortalecer tu gestión ambiental y de seguridad industrial.",
+      title: "¿Tu empresa está preparada para lo que viene?",
+      text: "Conoce tus obligaciones, identifica áreas de atención y establece prioridades para fortalecer tu operación.",
       cta: { label: "Solicitar diagnóstico", service: "diagnostico" },
       ctaSecondary: { label: "Hablar con un especialista", service: null },
       image:
@@ -496,11 +501,13 @@ const config = {
         "Gracias por contactarnos. Hemos recibido tu solicitud y nos pondremos en contacto contigo para conocer las necesidades de tu organización.",
       buttonLabel: "Solicitar información",
       services: [
-        { value: "diagnostico", label: "Diagnóstico 360°" },
-        { value: "consultoria", label: "Consultoría" },
-        { value: "auditoria", label: "Auditoría" },
-        { value: "capacitacion", label: "Capacitación" },
-        { value: "tramites", label: "Gestión de trámites" },
+        {
+          value: "diagnostico",
+          label: "Diagnóstico 360° Ambiental y de Seguridad Industrial",
+        },
+        { value: "consultoria", label: "Consultoría y auditorías" },
+        { value: "capacitacion", label: "Capacitación empresarial" },
+        { value: "tramites", label: "Gestión y trámites" },
         { value: "otro", label: "Otro" },
       ],
     },

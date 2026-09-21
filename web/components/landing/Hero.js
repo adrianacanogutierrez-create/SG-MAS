@@ -4,7 +4,7 @@ import CtaButton from "./CtaButton"
 import FadeIn from "./FadeIn"
 
 export default function Hero() {
-  const { title, subtitle, supportText, cta, ctaSecondary, image } = config.landing.hero
+  const { titleLine1, titleLine2, subtitle, supportText, cta, ctaSecondary, image } = config.landing.hero
 
   return (
     <section id="inicio" className="relative min-h-[85vh] overflow-hidden">
@@ -26,22 +26,16 @@ export default function Hero() {
               {config.landing.descriptor}
             </p>
             <h1 className="mt-4 text-3xl font-extrabold uppercase leading-tight tracking-tight text-white md:text-4xl lg:text-5xl">
-              {title}
+              {titleLine1}
+              <br />
+              {titleLine2}
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/90 md:text-xl">
-              {subtitle}
-            </p>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/90 md:text-xl">{subtitle}</p>
             <div className="mt-10 flex flex-wrap gap-4">
               <CtaButton label={cta.label} service={cta.service} />
-              <CtaButton
-                label={ctaSecondary.label}
-                href={ctaSecondary.href}
-                variant="outline"
-              />
+              <CtaButton label={ctaSecondary.label} href={ctaSecondary.href} variant="outline" />
             </div>
-            <p className="mt-8 text-xs font-medium uppercase tracking-[0.2em] text-white/70">
-              {supportText}
-            </p>
+            <p className="mt-8 text-xs font-medium uppercase tracking-[0.2em] text-white/70">{supportText}</p>
           </FadeIn>
         </div>
       </div>

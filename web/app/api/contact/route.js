@@ -2,12 +2,13 @@ import { NextResponse } from "next/server"
 import { createClient } from "@/lib/supabase/server"
 
 const SERVICE_LABELS = {
-  diagnostico: "Diagnóstico 360°",
-  consultoria: "Consultoría",
-  auditoria: "Auditoría",
-  capacitacion: "Capacitación",
-  tramites: "Gestión de trámites",
+  diagnostico: "Diagnóstico 360° Ambiental y de Seguridad Industrial",
+  consultoria: "Consultoría y auditorías",
+  capacitacion: "Capacitación empresarial",
+  tramites: "Gestión y trámites",
   otro: "Otro",
+  // Compat con envíos anteriores
+  auditoria: "Consultoría y auditorías",
 }
 
 export async function POST(request) {

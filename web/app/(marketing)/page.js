@@ -1,13 +1,12 @@
 import Hero from "@/components/landing/Hero"
-import ValueProp from "@/components/landing/ValueProp"
+import ServiciosPrincipales from "@/components/landing/ServiciosPrincipales"
 import Consultoria from "@/components/landing/Consultoria"
-import DiagnosticoFlow from "@/components/landing/DiagnosticoFlow"
+import Diagnostico360 from "@/components/landing/Diagnostico360"
 import Auditorias from "@/components/landing/Auditorias"
+import Metodologia from "@/components/landing/Metodologia"
 import Capacitacion from "@/components/landing/Capacitacion"
 import Tramites from "@/components/landing/Tramites"
-import Metodologia from "@/components/landing/Metodologia"
-import Diferenciador from "@/components/landing/Diferenciador"
-import ParaQuien from "@/components/landing/ParaQuien"
+import MomentosCliente from "@/components/landing/MomentosCliente"
 import Nosotros from "@/components/landing/Nosotros"
 import FinalCta from "@/components/landing/FinalCta"
 import ContactForm from "@/components/landing/ContactForm"
@@ -16,15 +15,14 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <ValueProp />
+      <ServiciosPrincipales />
       <Consultoria />
-      <DiagnosticoFlow />
+      <Diagnostico360 />
       <Auditorias />
+      <Metodologia />
       <Capacitacion />
       <Tramites />
-      <Metodologia />
-      <Diferenciador />
-      <ParaQuien />
+      <MomentosCliente />
       <Nosotros />
       <FinalCta />
       <ContactForm />

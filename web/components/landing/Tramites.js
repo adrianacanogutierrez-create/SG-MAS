@@ -7,13 +7,13 @@ import { Building2, MapPin, Landmark } from "lucide-react"
 const LEVEL_ICONS = [Landmark, Building2, MapPin]
 
 export default function Tramites() {
-  const { id, eyebrow, title, text, levels, gestionesTitle, gestiones, note, cta } =
+  const { id, eyebrow, title, subtitle, text, levels, gestionesTitle, gestiones, note, cta } =
     config.landing.tramites
 
   return (
     <section id={id} className="sgmas-section bg-white">
       <div className="sgmas-container">
-        <SectionHeader eyebrow={eyebrow} title={title} text={text} />
+        <SectionHeader eyebrow={eyebrow} title={title} subtitle={subtitle} text={text} />
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {levels.map((level, i) => {
