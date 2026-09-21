@@ -199,65 +199,194 @@ const config = {
 
     capacitacion: {
       id: "capacitacion",
-      eyebrow: "Capacitación empresarial",
-      title: "Fortalece las competencias de tu equipo.",
-      text: "La gestión de riesgos requiere personal capacitado y capaz de aplicar procedimientos adecuados en las actividades que desarrolla. SG+MAS ofrece capacitación empresarial especializada en seguridad industrial, emergencias y gestión ambiental, con contenidos orientados al contexto operativo de cada organización.",
-      subtitle: "Capacitación para el entorno industrial",
-      categories: [
+      eyebrow: "",
+      title: "Capacitación empresarial",
+      subtitle:
+        "Cursos especializados para fortalecer las competencias de tu organización en materia de seguridad, salud y medio ambiente.",
+      text: "Capacitación orientada a las necesidades reales de la industria, con enfoque preventivo, aplicación práctica y referencia al marco normativo mexicano aplicable.",
+      stpsBadge: "Cursos registrados ante STPS",
+      courseRegisteredLabel: "Curso registrado ante STPS",
+      whatsappPhone: "526142847739",
+      courses: [
         {
-          name: "Seguridad industrial",
-          courses: [
-            {
-              name: "Seguridad en el trabajo",
-              description: "Fundamentos y prácticas de prevención de riesgos en entornos industriales.",
-              modality: "Presencial / In company",
-            },
-            {
-              name: "Trabajos en alturas",
-              description: "Procedimientos seguros, equipos de protección y controles para trabajos elevados.",
-              modality: "Presencial / In company",
-            },
+          category: "Ambiental",
+          name: "Manejo de Residuos Peligrosos y No Peligrosos",
+          description:
+            "Fortalece las competencias del personal para identificar, separar y gestionar adecuadamente los residuos generados en las actividades de la empresa.",
+          objective:
+            "Proporcionar conocimientos para reconocer los principales tipos de residuos, favorecer su correcta separación y manejo y fortalecer las prácticas de gestión integral dentro de la organización.",
+          temario: [
+            "Introducción a la gestión integral de residuos",
+            "Identificación y clasificación de residuos",
+            "Separación y almacenamiento",
+            "Manejo y control de residuos",
+            "Prevención de impactos ambientales",
+            "Buenas prácticas y responsabilidad ambiental",
           ],
+          normativa:
+            "NOM-052-SEMARNAT-2005 y demás disposiciones aplicables según el tipo de residuo y actividad de la empresa.",
+          whatsappMessage:
+            "Hola, SG+MAS. Me interesa recibir información sobre el curso de Manejo de Residuos Peligrosos y No Peligrosos para mi empresa.",
         },
         {
-          name: "Emergencias",
-          courses: [
-            {
-              name: "Prevención y combate de incendios",
-              description: "Identificación de riesgos, uso de extintores y respuesta ante emergencias por fuego.",
-              modality: "Presencial / In company",
-            },
-            {
-              name: "Emergencias con amoniaco",
-              description: "Manejo seguro, respuesta a fugas y protocolos específicos para instalaciones con amoniaco.",
-              modality: "Presencial / In company",
-            },
+          category: "Seguridad industrial",
+          name: "Operación Segura de Montacargas",
+          description:
+            "Capacitación enfocada en la prevención de incidentes durante las actividades relacionadas con la operación y manejo de materiales mediante montacargas.",
+          objective:
+            "Fortalecer los conocimientos del personal sobre los principales riesgos asociados con la operación de montacargas y las medidas preventivas aplicables en el entorno laboral.",
+          temario: [
+            "Principios de seguridad en la operación",
+            "Características y riesgos asociados al equipo",
+            "Inspección y condiciones de seguridad",
+            "Manejo seguro de materiales",
+            "Riesgos, actos y condiciones inseguras",
+            "Medidas preventivas y buenas prácticas",
+            "Responsabilidades del personal",
+            "Evaluación de conocimientos",
           ],
+          normativa: "NOM-006-STPS-2014 y disposiciones aplicables.",
+          whatsappMessage:
+            "Hola, SG+MAS. Me interesa recibir información sobre el curso de Operación Segura de Montacargas para mi empresa.",
         },
         {
-          name: "Gestión ambiental",
-          courses: [
-            {
-              name: "Manejo de residuos peligrosos",
-              description: "Clasificación, almacenamiento, transporte y disposición conforme a la normativa aplicable.",
-              modality: "Presencial / In company",
-            },
-            {
-              name: "Cuidado y gestión del agua",
-              description: "Uso eficiente, cumplimiento de obligaciones y controles operacionales del recurso hídrico.",
-              modality: "Presencial / In company",
-            },
-            {
-              name: "Cédula de Operación Anual",
-              description:
-                "Resolvemos tus dudas sobre la plataforma, funcionamiento y obligaciones federales.",
-              modality: "Presencial / In company",
-            },
+          category: "Seguridad y salud",
+          name: "Ergonomía Aplicada",
+          description:
+            "Identificación de factores de riesgo ergonómico y aplicación de medidas preventivas para favorecer condiciones de trabajo más seguras.",
+          objective:
+            "Proporcionar herramientas para reconocer factores de riesgo ergonómico presentes en las actividades laborales y promover medidas preventivas orientadas a reducir la exposición.",
+          temario: [
+            "Fundamentos de ergonomía",
+            "Factores de riesgo ergonómico",
+            "Identificación de riesgos en las actividades laborales",
+            "Manipulación manual de cargas",
+            "Posturas y movimientos",
+            "Medidas preventivas y de control",
+            "Buenas prácticas ergonómicas",
+            "Aplicación en el entorno laboral",
           ],
+          normativa: "NOM-036-1-STPS-2018 y disposiciones aplicables.",
+          whatsappMessage:
+            "Hola, SG+MAS. Me interesa recibir información sobre el curso de Ergonomía Aplicada para mi empresa.",
+        },
+        {
+          category: "Emergencias",
+          name: "Combate Contra Incendios",
+          description:
+            "Fortalece la preparación del personal para prevenir incendios y participar de manera organizada en la respuesta ante situaciones de emergencia.",
+          objective:
+            "Desarrollar conocimientos básicos de prevención, organización y respuesta ante incendios, de acuerdo con las condiciones y riesgos de cada centro de trabajo.",
+          temario: [
+            "Fundamentos del fuego y los incendios",
+            "Identificación de riesgos de incendio",
+            "Medidas de prevención",
+            "Equipos y sistemas de protección contra incendios",
+            "Organización para la atención de emergencias",
+            "Evacuación y respuesta organizada",
+            "Brigadas y responsabilidades",
+            "Evaluación y mejora de la preparación",
+          ],
+          normativa: "NOM-002-STPS-2010 y disposiciones aplicables.",
+          whatsappMessage:
+            "Hola, SG+MAS. Me interesa recibir información sobre el curso de Combate Contra Incendios para mi empresa.",
+        },
+        {
+          category: "Emergencias",
+          name: "Emergencias con Amoniaco",
+          description:
+            "Capacitación orientada al reconocimiento de los riesgos asociados al amoniaco y a la preparación organizada ante situaciones de emergencia.",
+          objective:
+            "Fortalecer los conocimientos del personal para reconocer los peligros asociados al amoniaco, interpretar la información de seguridad y comprender los principios de prevención y respuesta ante emergencias.",
+          temario: [
+            "Características y peligros asociados al amoniaco",
+            "Reconocimiento de escenarios de riesgo",
+            "Comunicación de peligros e información de seguridad",
+            "Medidas preventivas",
+            "Organización para la atención de emergencias",
+            "Uso y selección de equipo de protección conforme a procedimientos establecidos",
+            "Comunicación, evacuación y coordinación",
+            "Simulacros y evaluación de la respuesta",
+          ],
+          normativa: "NOM-010-STPS-2014, NOM-018-STPS-2015 y demás disposiciones aplicables.",
+          whatsappMessage:
+            "Hola, SG+MAS. Me interesa recibir información sobre el curso de Emergencias con Amoniaco para mi empresa.",
+        },
+        {
+          category: "Seguridad industrial",
+          name: "Trabajos en Alturas",
+          description:
+            "Capacitación para reconocer los riesgos asociados al trabajo en alturas y fortalecer las medidas preventivas para evitar accidentes.",
+          objective:
+            "Proporcionar conocimientos para identificar peligros, aplicar medidas preventivas y fortalecer la gestión segura de las actividades realizadas en altura.",
+          temario: [
+            "Conceptos fundamentales de trabajo en alturas",
+            "Identificación de peligros y evaluación de riesgos",
+            "Medidas preventivas",
+            "Sistemas personales de protección contra caídas",
+            "Equipos y sistemas de acceso",
+            "Andamios y plataformas",
+            "Organización y responsabilidades",
+            "Atención y respuesta ante emergencias",
+            "Evaluación de conocimientos",
+          ],
+          normativa: "NOM-009-STPS-2011 y disposiciones aplicables.",
+          whatsappMessage:
+            "Hola, SG+MAS. Me interesa recibir información sobre el curso de Trabajos en Alturas para mi empresa.",
+        },
+        {
+          category: "Gestión ambiental",
+          name: "Llenado de la Cédula de Operación Anual",
+          description:
+            "Capacitación para comprender la estructura de la COA y organizar la información ambiental necesaria para su integración y presentación.",
+          objective:
+            "Proporcionar conocimientos para identificar, organizar y revisar la información requerida para la integración de la Cédula de Operación Anual, de acuerdo con las obligaciones aplicables al establecimiento.",
+          temario: [
+            "Introducción a la Cédula de Operación Anual",
+            "Identificación del establecimiento y datos generales",
+            "Información de operación",
+            "Emisiones y transferencias",
+            "Información relacionada con residuos y contaminantes",
+            "Integración y organización de información",
+            "Revisión y validación de datos",
+            "Captura de información",
+            "Revisión previa a la presentación",
+          ],
+          normativa:
+            "Disposiciones y criterios vigentes de SEMARNAT aplicables a la Cédula de Operación Anual.",
+          whatsappMessage:
+            "Hola, SG+MAS. Me interesa recibir información sobre el curso de Llenado de la Cédula de Operación Anual para mi empresa.",
+        },
+        {
+          category: "Gestión ambiental",
+          name: "Cultura del Cuidado del Agua",
+          description:
+            "Promueve una cultura organizacional orientada al uso responsable, eficiente y sostenible del agua dentro de la empresa.",
+          objective:
+            "Sensibilizar y proporcionar herramientas al personal para identificar oportunidades de ahorro, prevenir desperdicios y fortalecer una cultura de uso responsable del recurso hídrico.",
+          temario: [
+            "Importancia del agua",
+            "Uso del agua en las actividades de la empresa",
+            "Identificación de consumos y oportunidades de mejora",
+            "Prevención de desperdicios y fugas",
+            "Uso eficiente y responsable del recurso",
+            "Prevención de contaminación",
+            "Cultura ambiental y participación del personal",
+            "Buenas prácticas y mejora continua",
+          ],
+          normativa:
+            "Principios y programas de Cultura del Agua promovidos por CONAGUA y disposiciones ambientales aplicables.",
+          whatsappMessage:
+            "Hola, SG+MAS. Me interesa recibir información sobre el curso de Cultura del Cuidado del Agua para mi empresa.",
         },
       ],
-      note: "Los contenidos y modalidades pueden adaptarse a las características, riesgos y necesidades de cada organización.",
-      cta: { label: "Solicitar capacitación", service: "capacitacion" },
+      finalCta: {
+        title: "¿Necesitas capacitar a tu personal en un tema específico?",
+        text: "Podemos revisar las necesidades de capacitación de tu organización y proponer una alternativa acorde con sus actividades, procesos y riesgos.",
+        buttonLabel: "Hablar con SG+MAS",
+        whatsappMessage:
+          "Hola, SG+MAS. Me interesa conocer las opciones de capacitación para mi empresa.",
+      },
     },
 
     tramites: {
