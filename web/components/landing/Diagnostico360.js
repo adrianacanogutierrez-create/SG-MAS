@@ -1,9 +1,11 @@
 import config from "@/config"
 import CtaButton from "./CtaButton"
+import WhatsappButton from "./WhatsappButton"
 import FadeIn from "./FadeIn"
 
 export default function Diagnostico360() {
-  const { id, title, titleLine2, text, elementsTitle, elements, cta } = config.landing.diagnostico360
+  const { id, title, titleLine2, text, elementsTitle, elements, cta, ctaWhatsapp } =
+    config.landing.diagnostico360
 
   return (
     <section id={id} className="sgmas-section bg-white">
@@ -29,8 +31,13 @@ export default function Diagnostico360() {
             ))}
           </div>
 
-          <div className="mt-10">
+          <div className="mt-10 flex flex-wrap gap-4">
             <CtaButton label={cta.label} service={cta.service} />
+            <WhatsappButton
+              label={ctaWhatsapp.label}
+              message={config.landing.whatsapp.diagnosticoMessage}
+              variant="secondary"
+            />
           </div>
         </div>
       </div>

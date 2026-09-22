@@ -1,10 +1,11 @@
 import Image from "next/image"
 import config from "@/config"
 import CtaButton from "./CtaButton"
+import WhatsappButton from "./WhatsappButton"
 import FadeIn from "./FadeIn"
 
 export default function FinalCta() {
-  const { title, text, cta, ctaSecondary, image } = config.landing.finalCta
+  const { title, text, ctaWhatsapp, ctaForm, image } = config.landing.finalCta
 
   return (
     <section className="relative overflow-hidden py-24 md:py-32">
@@ -24,8 +25,8 @@ export default function FinalCta() {
           </h2>
           <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-white/90">{text}</p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <CtaButton label={cta.label} service={cta.service} />
-            <CtaButton label={ctaSecondary.label} service={ctaSecondary.service} variant="outline" />
+            <WhatsappButton label={ctaWhatsapp.label} message={config.landing.whatsapp.defaultMessage} />
+            <CtaButton label={ctaForm.label} service={ctaForm.service} variant="outline" />
           </div>
         </FadeIn>
       </div>

@@ -1,6 +1,6 @@
 import config from "@/config"
 import SectionHeader from "./SectionHeader"
-import CtaButton from "./CtaButton"
+import WhatsappButton from "./WhatsappButton"
 import FadeIn from "./FadeIn"
 import { Building2, MapPin, Landmark } from "lucide-react"
 
@@ -50,7 +50,7 @@ export default function Tramites() {
         </FadeIn>
 
         <div className="mt-10">
-          <CtaButton label={cta.label} service={cta.service} />
+          <WhatsappButton label={cta.label} message={config.landing.whatsapp.tramitesMessage} />
         </div>
       </div>
     </section>

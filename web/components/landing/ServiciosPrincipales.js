@@ -22,7 +22,6 @@ export default function ServiciosPrincipales() {
                 <span className="text-2xl font-extrabold text-[var(--sgmas-green)]">{item.number}</span>
                 <Icon className="mt-4 size-7 text-[var(--sgmas-blue)]" strokeWidth={1.75} />
                 <h3 className="mt-4 text-lg font-bold uppercase text-[var(--sgmas-blue)]">{item.title}</h3>
-                <p className="mt-2 text-sm font-semibold text-[var(--sgmas-gray)]">{item.tagline}</p>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--sgmas-gray)]">{item.description}</p>
                 <div className="mt-6">
                   <CtaButton label={item.cta.label} href={item.cta.href} variant="secondary" className="w-full text-xs" />

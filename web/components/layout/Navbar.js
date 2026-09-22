@@ -5,7 +5,8 @@ import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import config from "@/config"
 import Logo from "@/components/Logo"
-import CtaButton from "@/components/landing/CtaButton"
+import WhatsappButton from "@/components/landing/WhatsappButton"
+import SocialLinks from "@/components/landing/SocialLinks"
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -33,7 +34,7 @@ export default function Navbar() {
           <Logo variant="nav" />
         </Link>
 
-        <ul className="hidden items-center gap-5 lg:flex">
+        <ul className="hidden items-center gap-4 xl:gap-5 lg:flex">
           {config.landing.nav.map((item) => (
             <li key={item.href}>
               <Link
@@ -46,8 +47,9 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden lg:block">
-          <CtaButton label="Solicitar diagnóstico" service="diagnostico" className="text-xs" />
+        <div className="hidden items-center gap-4 lg:flex">
+          <SocialLinks iconClass="size-4" />
+          <WhatsappButton label="WhatsApp" className="text-xs" />
         </div>
 
         <button
@@ -75,12 +77,9 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <div className="mt-4">
-            <CtaButton
-              label="Solicitar diagnóstico"
-              service="diagnostico"
-              className="w-full text-xs"
-            />
+          <div className="mt-4 flex flex-col gap-3">
+            <SocialLinks />
+            <WhatsappButton label="WhatsApp" className="w-full text-xs" />
           </div>
         </div>
       )}

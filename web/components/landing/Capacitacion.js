@@ -7,9 +7,9 @@ import FadeIn from "./FadeIn"
 import { GraduationCap, ChevronDown } from "lucide-react"
 import { whatsappUrl } from "@/lib/whatsapp"
 
-function CourseCard({ course, phone, registeredLabel, delay }) {
+function CourseCard({ course, delay }) {
   const [open, setOpen] = useState(false)
-  const waHref = whatsappUrl(phone, course.whatsappMessage)
+  const waHref = whatsappUrl(undefined, course.whatsappMessage)
 
   return (
     <FadeIn delay={delay} className="sgmas-card flex flex-col">
@@ -19,9 +19,6 @@ function CourseCard({ course, phone, registeredLabel, delay }) {
       <GraduationCap className="mt-4 size-6 text-[var(--sgmas-green)]" />
       <h4 className="mt-3 text-base font-bold leading-snug text-[var(--sgmas-blue)]">{course.name}</h4>
       <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--sgmas-gray)]">{course.description}</p>
-      <p className="mt-3 text-[10px] font-medium uppercase tracking-wide text-[var(--sgmas-gray)]">
-        {registeredLabel}
-      </p>
 
       {open && (
         <div className="mt-4 border-t border-[var(--sgmas-bg-gray)] pt-4 text-sm text-[var(--sgmas-gray)]">
@@ -62,19 +59,9 @@ function CourseCard({ course, phone, registeredLabel, delay }) {
 }
 
 export default function Capacitacion() {
-  const {
-    id,
-    title,
-    subtitle,
-    text,
-    stpsBadge,
-    courseRegisteredLabel,
-    whatsappPhone,
-    courses,
-    finalCta,
-  } = config.landing.capacitacion
+  const { id, title, subtitle, text, stpsBadge, courses, finalCta } = config.landing.capacitacion
 
-  const finalWaHref = whatsappUrl(whatsappPhone, finalCta.whatsappMessage)
+  const finalWaHref = whatsappUrl(undefined, config.landing.whatsapp.capacitacionMessage)
 
   return (
     <section id={id} className="sgmas-section bg-[var(--sgmas-bg-light)]">
@@ -89,18 +76,12 @@ export default function Capacitacion() {
 
         <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {courses.map((course, i) => (
-            <CourseCard
-              key={course.name}
-              course={course}
-              phone={whatsappPhone}
-              registeredLabel={courseRegisteredLabel}
-              delay={i * 60}
-            />
+            <CourseCard key={course.name} course={course} delay={i * 60} />
           ))}
         </div>
 
         <FadeIn className="mt-14 rounded-lg border border-[var(--sgmas-bg-gray)] bg-white p-8 md:p-10">
-          <h3 className="text-lg font-bold uppercase text-[var(--sgmas-blue)] md:text-xl">{finalCta.title}</h3>
+          <h2 className="text-lg font-bold uppercase text-[var(--sgmas-blue)] md:text-xl">{finalCta.title}</h2>
           <p className="mt-4 max-w-3xl leading-relaxed text-[var(--sgmas-gray)]">{finalCta.text}</p>
           <a
             href={finalWaHref}

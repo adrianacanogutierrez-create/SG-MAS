@@ -1,18 +1,18 @@
 import config from "@/config"
 import SectionHeader from "./SectionHeader"
-import CtaButton from "./CtaButton"
+import WhatsappButton from "./WhatsappButton"
 import FadeIn from "./FadeIn"
 import { Shield, Leaf, FileText, Search } from "lucide-react"
 
 const ICONS = [Shield, Leaf, FileText, Search]
 
 export default function Auditorias() {
-  const { eyebrow, title, subtitle, items, cta } = config.landing.auditorias
+  const { title, subtitle, items, cta } = config.landing.auditorias
 
   return (
     <section className="sgmas-section bg-[var(--sgmas-bg-light)]">
       <div className="sgmas-container">
-        <SectionHeader eyebrow={eyebrow} title={title} subtitle={subtitle} align="center" />
+        <SectionHeader title={title} subtitle={subtitle} align="center" />
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2">
           {items.map((item, i) => {
@@ -28,7 +28,7 @@ export default function Auditorias() {
         </div>
 
         <div className="mt-10 text-center">
-          <CtaButton label={cta.label} service={cta.service} />
+          <WhatsappButton label={cta.label} message={config.landing.whatsapp.evaluacionesMessage} />
         </div>
       </div>
     </section>
