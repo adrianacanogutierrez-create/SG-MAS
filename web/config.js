@@ -545,14 +545,6 @@ const config = {
       text: "SG+MAS es un servicio especializado en gestión ambiental y seguridad industrial, enfocado en apoyar a empresas en la atención de sus obligaciones, prevención de riesgos y capacitación de su personal.",
       text2:
         "Nuestra experiencia combina conocimientos técnicos, gestión administrativa y atención personalizada para ofrecer servicios acordes con las características de cada organización.",
-      profile: {
-        name: "MBA. Adriana Cano",
-        lines: [
-          "Ingeniera en Ecología",
-          "Más de 10 años de experiencia en medio ambiente y seguridad industrial.",
-          "Agente Capacitador Externo registrado ante STPS.",
-        ],
-      },
     },
 
     experiencia: {
